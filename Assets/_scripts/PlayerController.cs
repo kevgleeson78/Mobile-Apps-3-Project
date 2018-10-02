@@ -11,9 +11,9 @@ public class PlayerController : MonoBehaviour {
     public float speed = 1;
     // Update is called once per frame
     void Update () {
-        float h = Input.GetAxisRaw("Horizontal");
+        var move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical"),0);
+        transform.position += move * speed * Time.deltaTime;
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(h, 0) * speed;
     }
     void OnCollisionEnter2D(Collision2D col)
     {

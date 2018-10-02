@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour {
-    public GameObject EnemySpawn;
-  
+    public Enemy enemy;
+    
     float randX;
     Vector2 whereToSpawn;
     public float spawnRate = 1f;
@@ -24,7 +24,7 @@ public class SpawnEnemy : MonoBehaviour {
             nextSpawn = Time.time + spawnRate;
             randX = Random.Range(-8.4f, 8.4f);
             whereToSpawn = new Vector2(randX, transform.position.y);
-            Instantiate(EnemySpawn, whereToSpawn, Quaternion.identity);
+            Instantiate(enemy, whereToSpawn, Quaternion.identity);
         }
 
         

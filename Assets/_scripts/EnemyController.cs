@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Rigidbody2D>();
-        gameObject.GetComponent<BoxCollider2D>();
+        
         gameObject.AddComponent<Rigidbody2D>().gravityScale = 0.025f;
     }
 
@@ -24,7 +24,13 @@ public class EnemyController : MonoBehaviour
     {
         //Check collision name
         Debug.Log("collision name = " + col.gameObject.name);
-        if (col.gameObject.name == "Ground" || col.gameObject.name == "bullet(Clone)")
+        if (col.gameObject.name == "bullet(Clone)")
+        {
+            Destroy(gameObject);
+            Destroy(col.gameObject);
+
+        }
+        if (col.gameObject.name == "spaceship")
         {
             Destroy(gameObject);
 

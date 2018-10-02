@@ -62,11 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_scripts\BulletScript.cs" />
+    <Compile Include="Assets\_scripts\Enemy.cs" />
     <Compile Include="Assets\_scripts\EnemyController.cs" />
+    <Compile Include="Assets\_scripts\GameController.cs" />
     <Compile Include="Assets\_scripts\PlayerController.cs" />
     <Compile Include="Assets\_scripts\ScrollBG.cs" />
     <Compile Include="Assets\_scripts\SpawnEnemy.cs" />
-    <Compile Include="Assets\Scroll.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Kevin/Documents/SpaceAttack/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
