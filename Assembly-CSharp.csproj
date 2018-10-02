@@ -66,19 +66,20 @@
     <Compile Include="Assets\_scripts\EnemyController.cs" />
     <Compile Include="Assets\_scripts\GameController.cs" />
     <Compile Include="Assets\_scripts\PlayerController.cs" />
+    <Compile Include="Assets\_scripts\Score.cs" />
     <Compile Include="Assets\_scripts\ScrollBG.cs" />
     <Compile Include="Assets\_scripts\SpawnEnemy.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Kevin/Documents/SpaceAttack/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Kevin/Desktop/College Folders/Year 4/Sem 1/Mobile Apps 3/Project/SpaceAttack/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Kevin/Documents/SpaceAttack/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Kevin/Desktop/College Folders/Year 4/Sem 1/Mobile Apps 3/Project/SpaceAttack/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Kevin/Documents/SpaceAttack/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Kevin/Desktop/College Folders/Year 4/Sem 1/Mobile Apps 3/Project/SpaceAttack/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Kevin/Documents/SpaceAttack/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Kevin/Desktop/College Folders/Year 4/Sem 1/Mobile Apps 3/Project/SpaceAttack/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -26,9 +26,10 @@ public class EnemyController : MonoBehaviour
         Debug.Log("collision name = " + col.gameObject.name);
         if (col.gameObject.name == "bullet(Clone)")
         {
+            Score.scoreValue += 10;
             Destroy(gameObject);
             Destroy(col.gameObject);
-
+            //Debug.Log("Score = " + Score.scoreValue);
         }
         if (col.gameObject.name == "spaceship")
         {
