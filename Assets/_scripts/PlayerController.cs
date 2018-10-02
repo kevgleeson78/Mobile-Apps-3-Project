@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public GameObject bullet;
+    Vector2 bulletPos;
+    public float fireRate = 0.5f;
+    float nextFire = 0f;
+    // Use this for initialization
+    void Start () {
+  
+    }
     public float speed = 1;
     // Update is called once per frame
     void Update () {
         var move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical"),0);
         transform.position += move * speed * Time.deltaTime;
-
+        if(Input.GetButtonDown("Jump") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            fire();
+        }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -25,5 +32,13 @@ public class PlayerController : MonoBehaviour {
 
         }
         
+
+    }
+    void fire()
+    {
+        bulletPos = transform.position;
+        bulletPos += new Vector2(+1f, -0.43f);
+        Instantiate(bullet, bulletPos, Quaternion.identity);
+      
     }
 }

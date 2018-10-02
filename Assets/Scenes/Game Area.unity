@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce74608cd76eab4cae45909980646ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.025
 --- !u!1001 &711426229
 Prefab:
   m_ObjectHideFlags: 0
@@ -222,11 +222,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4073778919529848, guid: 2d9f3ac240a4ceb4d90b38493ec58e9a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.7728156
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4073778919529848, guid: 2d9f3ac240a4ceb4d90b38493ec58e9a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.513859
+      value: 6.18
       objectReference: {fileID: 0}
     - target: {fileID: 4073778919529848, guid: 2d9f3ac240a4ceb4d90b38493ec58e9a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -302,6 +302,12 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114024289536892912, guid: 9c4d0c61bed5de0459ce86e4b5c60354,
+        type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1345670857291558, guid: 16f00c8177ecbbf4f852b96f5271f0cc,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4d0c61bed5de0459ce86e4b5c60354, type: 2}
   m_IsPrefabAsset: 0

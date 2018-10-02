@@ -34,7 +34,6 @@ public class EnemyController : MonoBehaviour
         if (col.gameObject.name == "spaceship")
         {
             Destroy(gameObject);
-
         }
 
     }
