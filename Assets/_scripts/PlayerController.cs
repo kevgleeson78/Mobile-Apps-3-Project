@@ -51,17 +51,13 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        //Check collision name
-        Debug.Log("collision name = " + col.gameObject.name);
-        if (col.gameObject.name == "Enemy(Clone)")
+        if ((col.tag == "EnemyShipTag") || (col.tag == "EnemyBulletTag"))
         {
             Destroy(gameObject);
-
+            
         }
-        
-
     }
-    
+
 }
