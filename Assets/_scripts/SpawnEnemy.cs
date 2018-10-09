@@ -7,7 +7,7 @@ public class SpawnEnemy : MonoBehaviour {
     
     float randX;
     Vector2 whereToSpawn;
-    public float spawnRate = 1f;
+    public float spawnRate = 1.5f;
     float nextSpawn = 0.0f;
     
 	// Use this for initialization

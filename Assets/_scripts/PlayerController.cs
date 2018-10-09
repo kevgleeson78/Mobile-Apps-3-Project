@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     public GameObject PlayerBullet;
@@ -56,7 +57,10 @@ public class PlayerController : MonoBehaviour {
         if ((col.tag == "EnemyShipTag") || (col.tag == "EnemyBulletTag"))
         {
             Destroy(gameObject);
-            
+            SceneManager.LoadScene(0);
+            Score.scoreValue = 0;
+
+
         }
     }
 

@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     {
         //Get the current position of the enemy ship
         Vector2 position = transform.position;
-        //Get nect position in the frame
+        //Get next position in the frame
         position = new Vector2(position.x, position.y - speed * Time.deltaTime);
         //Update the new position
         transform.position = position;

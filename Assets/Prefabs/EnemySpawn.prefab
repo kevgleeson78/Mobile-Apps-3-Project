@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 114787733799244842, guid: 5fffb40d430e07b45ac8f639523c1367, type: 2}
-  spawnRate: 1
+  spawnRate: 1.5
