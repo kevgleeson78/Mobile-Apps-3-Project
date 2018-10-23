@@ -34,10 +34,14 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if ((col.tag == "PlayerShipTag")||(col.tag == "PlayerBulletTag"))
+        if (col.tag == "PlayerBulletTag")
         {
             Destroy(gameObject);
             Score.scoreValue = Score.scoreValue + 10;
+        }
+        if (col.tag == "PlayerShipTag")
+        {
+            Destroy(gameObject);
         }
     }
 
