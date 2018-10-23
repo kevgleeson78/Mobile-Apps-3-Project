@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
         Move(direction);
         if (Input.GetKeyDown("space"))
         {
+            GetComponent<AudioSource>().Play();
             GameObject bullet = (GameObject)Instantiate(PlayerBullet);
             bullet.transform.position = BulletPosition.transform.position;
         }
@@ -58,9 +59,15 @@ public class PlayerController : MonoBehaviour {
         {
             Destroy(gameObject);
             SceneManager.LoadScene(0);
+            
+            Lives.livesValue--;
+
+
+        }
+        if(Lives.livesValue == 0)
+        {
+            Lives.livesValue = 3;
             Score.scoreValue = 0;
-
-
         }
     }
 
