@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
+    public GameObject GameController;
     //Get acces to the player bullet prefab
     public GameObject PlayerBullet;
     // For positioning of the bullet at the top of the spaceship
@@ -76,26 +77,28 @@ public class PlayerController : MonoBehaviour {
         {
             //Remove the game object if the collision has been detected
             Destroy(gameObject);
-            
+           // gameObject.SetActive(false);
             // Decrement the player lives value from the Lives script
             Lives.livesValue--;
 
             //Function to reload the scene used in the game over condition
             // SceneManager.LoadScene(0);
-           
+            //Gameover condition
+            if (Lives.livesValue == 0)
+            {
+                //Function to reload the scene used in the game over condition
+
+                 SceneManager.LoadScene(0);
+                //Set the initial value of lives to three
+                 Lives.livesValue = 3;
+                //Set the initial score value to zero for the start of the game
+                Score.scoreValue = 0;
+                
+            }
 
         }
         
-        //Gameover condition
-        if (Lives.livesValue == 0)
-        {
-            //Function to reload the scene used in the game over condition
-            SceneManager.LoadScene(0);
-            //Set the initial value of lives to three
-            Lives.livesValue = 3;
-            //Set the initial score value to zero for the start of the game
-            Score.scoreValue = 0;
-        }
+
     }
 
    
