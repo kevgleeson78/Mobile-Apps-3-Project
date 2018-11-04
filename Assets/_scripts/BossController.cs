@@ -8,19 +8,26 @@ public class BossController : MonoBehaviour
 {
     //Var to hold enemy speed
     float speed;
+    private bool dirRight = true;
+   
     // Use this for initialization
+    public static float health;
     void Start()
     {   //Set speed
-        speed = 1f;
+        speed = 2f;
+        health = 10;
     }
 
-    private bool dirRight = true;
+    
 
 
     void Update()
     {
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+        max.x = max.x - 4f;
+        //Offset to allow for the width of the ship sprite to right of screen
+        min.x = min.x + 4f;
         if (dirRight)
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         else
@@ -35,17 +42,21 @@ public class BossController : MonoBehaviour
         {
             dirRight = true;
         }
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
         private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "PlayerBulletTag")
         {
-            Destroy(gameObject);
+            health -= .1f;
             Score.scoreValue = Score.scoreValue + 10;
         }
         if (col.tag == "PlayerShipTag")
         {
-            Destroy(gameObject);
+            health -= .1f;
         }
     }
 

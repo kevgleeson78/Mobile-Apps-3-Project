@@ -10,12 +10,16 @@ using UnityEngine;
 public class EnemyGun : MonoBehaviour {
     //Enemies Bullet Prefab
     public GameObject EnemyBullet;
+    [SerializeField]
+    private float fireRate = 1f;
+    [SerializeField]
+    private float nextFire = 1f;
 	// Use this for initialization
 	void Start () {
         //First paramater for Function name
-        //Second Parameter for when the ship stsrts to shoot
+        //Second Parameter for when the ship starts to shoot
         //Third paramater for the time till next shot.
-        InvokeRepeating("FireEnemyBullet", 1f, 4f);
+        InvokeRepeating("FireEnemyBullet", nextFire, fireRate);
 
     }
      // Update is called once per frame
@@ -31,6 +35,7 @@ public class EnemyGun : MonoBehaviour {
         {
             //Make instance of enemyBullet prefab
             GameObject bullet = (GameObject)Instantiate(EnemyBullet);
+            bullet.name = "EnemyBullet";
             //Get Position of the bullet
             bullet.transform.position = transform.position;
 

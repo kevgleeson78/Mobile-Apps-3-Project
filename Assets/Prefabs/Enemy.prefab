@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810892944953210}
   - component: {fileID: 114817374086573734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 61666858227767792}
   - component: {fileID: 114787733799244842}
   - component: {fileID: 114161298731120106}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: EnemyShipTag
   m_Icon: {fileID: 0}
@@ -109,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4bffa4d5cdd53942824d42cdb8462dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explode: {fileID: 1527450793418340, guid: 01a92613d266dff4e96a1a84c5aa927f, type: 2}
 --- !u!114 &114787733799244842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 1531732616716944, guid: ab9337e77ae003e4f987dc57441549f9,
     type: 2}
+  fireRate: 3
+  nextFire: 1
 --- !u!212 &212046836572645758
 SpriteRenderer:
   m_ObjectHideFlags: 1

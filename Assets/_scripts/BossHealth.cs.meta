@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 07af1db0461b8324a8a9d583474d2ff2
+guid: 66bbedac45ff6314998a336719d3ddda
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - playerPefab: {fileID: 1487562392146488, guid: a29f54dfff27b6142b2ef18dcabfbbe5,
-      type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

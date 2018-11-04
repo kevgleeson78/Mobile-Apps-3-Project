@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_scripts\BossController.cs" />
+    <Compile Include="Assets\_scripts\BossHealth.cs" />
     <Compile Include="Assets\_scripts\BulletAudio.cs" />
     <Compile Include="Assets\_scripts\Enemy.cs" />
     <Compile Include="Assets\_scripts\EnemyBullet.cs" />

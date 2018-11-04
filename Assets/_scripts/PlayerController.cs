@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
-    public GameObject GameController;
+   
     //Get acces to the player bullet prefab
     public GameObject PlayerBullet;
     // For positioning of the bullet at the top of the spaceship
@@ -13,11 +13,7 @@ public class PlayerController : MonoBehaviour {
     // The speed the ship travels
     
     public float speed = 1;
-    // Use this for initialization
-   
-       
-    
-    
+        
     // Update is called once per frame
     void Update () {
         // x,y for getting the verticle and horizontal movements of the ship
@@ -48,13 +44,13 @@ public class PlayerController : MonoBehaviour {
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
         //Offset to allow for the width of the ship sprite to left of screen
-        max.x = max.x - 1.5f;
+        max.x = max.x - 1f;
         //Offset to allow for the width of the ship sprite to right of screen
-        min.x = min.x + 1.5f;
+        min.x = min.x + 1f;
         // Stop the ship moving all the way to the top as per design document
         max.y = max.y - 3.5f;
         // Offset to allow for the height of the sprite at the bottom of the screen
-        min.y = min.y + 1.5f;
+        min.y = min.y + 1f;
         // Set the position of the player sprite
         Vector2 position = transform.position;
         // The movement transition
@@ -80,6 +76,7 @@ public class PlayerController : MonoBehaviour {
            // gameObject.SetActive(false);
             // Decrement the player lives value from the Lives script
             Lives.livesValue--;
+           
 
             //Function to reload the scene used in the game over condition
             // SceneManager.LoadScene(0);
@@ -90,7 +87,7 @@ public class PlayerController : MonoBehaviour {
 
                  SceneManager.LoadScene(2);
                 //Set the initial value of lives to three
-                 Lives.livesValue = 3;
+                Lives.livesValue = 3;
                 //Set the initial score value to zero for the start of the game
                 Score.scoreValue = 0;
                 
@@ -100,6 +97,7 @@ public class PlayerController : MonoBehaviour {
         
 
     }
+    
 
-   
+
 }

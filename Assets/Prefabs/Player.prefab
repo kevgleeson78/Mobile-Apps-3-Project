@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4710801834217508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 50116548718711010}
   - component: {fileID: 61636810062917928}
   - component: {fileID: 82441186037513760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: PlayerShipTag
   m_Icon: {fileID: 0}
@@ -224,8 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5e5818be0b65044a3042ffc71e15e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameController: {fileID: 1415752761822482, guid: 286a497fd97567849b5cf786bb6b3e26,
-    type: 2}
   PlayerBullet: {fileID: 1571835385642384, guid: 9005832b7d713c5459c2ad5ef2052121,
     type: 2}
   BulletPosition: {fileID: 1414662247974992}
