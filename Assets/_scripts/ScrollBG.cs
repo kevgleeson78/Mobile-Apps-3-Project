@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Adapted From https://www.youtube.com/watch?v=HrDxnMI7pCc
 public class ScrollBG : MonoBehaviour {
     public float speed;
 	

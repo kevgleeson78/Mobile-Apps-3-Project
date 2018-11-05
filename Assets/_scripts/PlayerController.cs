@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//Adapted From https://www.youtube.com/watch?v=Om00FwLg-eg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=2
 
 public class PlayerController : MonoBehaviour {
    
@@ -86,10 +87,7 @@ public class PlayerController : MonoBehaviour {
                 //Function to reload the scene used in the game over condition
 
                  SceneManager.LoadScene(2);
-                //Set the initial value of lives to three
-                Lives.livesValue = 3;
-                //Set the initial score value to zero for the start of the game
-                Score.scoreValue = 0;
+                
                 
             }
 

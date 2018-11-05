@@ -3,7 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Adapted from https://forum.unity.com/threads/left-and-right-enemy-moving-in-2d-platformer.364716/
 public class BossController : MonoBehaviour
 {
     //Var to hold enemy speed

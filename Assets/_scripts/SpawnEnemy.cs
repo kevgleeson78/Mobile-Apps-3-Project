@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Adapted From https://answers.unity.com/questions/810806/spawn-random-enemy.html
 public class SpawnEnemy : MonoBehaviour {
     public Enemy enemy;
     

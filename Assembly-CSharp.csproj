@@ -68,6 +68,8 @@
     <Compile Include="Assets\_scripts\EnemyBullet.cs" />
     <Compile Include="Assets\_scripts\EnemyController.cs" />
     <Compile Include="Assets\_scripts\EnemyGun.cs" />
+    <Compile Include="Assets\_scripts\Leaderboard.cs" />
+    <Compile Include="Assets\_scripts\LeaderboardTestGUI.cs" />
     <Compile Include="Assets\_scripts\Lives.cs" />
     <Compile Include="Assets\_scripts\MainMenu.cs" />
     <Compile Include="Assets\_scripts\PlayerBullet.cs" />

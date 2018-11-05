@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//Adapted from https://www.youtube.com/watch?v=QbqnDbexrCw
 public class Score : MonoBehaviour {
     public static int scoreValue = 0;
     Text score;

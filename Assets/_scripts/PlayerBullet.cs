@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Adapted From https://answers.unity.com/questions/647264/unity-2d-attacking.html
 public class PlayerBullet : MonoBehaviour {
     float speed;
     private void Start()

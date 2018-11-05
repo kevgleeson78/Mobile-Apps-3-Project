@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Adapted from https://www.youtube.com/watch?v=2WlY0dL5Qrg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=3
 /* An empty game object is placed in front of the enemy ship to hold
  * THe enemy bullet prefab.
  * This script is attached to the enemy gun game aoject.

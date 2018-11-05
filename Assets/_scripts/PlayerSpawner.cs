@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour {
     /*
-     * Adapted from https://www.youtube.com/watch?v=1oMOcL0iO4A     * 
+     * Adapted from https://www.youtube.com/watch?v=1oMOcL0iO4A     
      * 
      */
    
