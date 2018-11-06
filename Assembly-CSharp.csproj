@@ -68,6 +68,7 @@
     <Compile Include="Assets\_scripts\EnemyBullet.cs" />
     <Compile Include="Assets\_scripts\EnemyController.cs" />
     <Compile Include="Assets\_scripts\EnemyGun.cs" />
+    <Compile Include="Assets\_scripts\GameOver.cs" />
     <Compile Include="Assets\_scripts\Leaderboard.cs" />
     <Compile Include="Assets\_scripts\LeaderboardTestGUI.cs" />
     <Compile Include="Assets\_scripts\Lives.cs" />
@@ -75,7 +76,6 @@
     <Compile Include="Assets\_scripts\PlayerBullet.cs" />
     <Compile Include="Assets\_scripts\PlayerController.cs" />
     <Compile Include="Assets\_scripts\PlayerSpawner.cs" />
-    <Compile Include="Assets\_scripts\SceneTimer.cs" />
     <Compile Include="Assets\_scripts\Score.cs" />
     <Compile Include="Assets\_scripts\ScrollBG.cs" />
     <Compile Include="Assets\_scripts\SpawnEnemy.cs" />

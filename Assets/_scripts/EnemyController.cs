@@ -1,9 +1,19 @@
 ﻿
-
+/* Application Name: Space Attack
+ * File Name: 
+ * Version: 1.0
+ * @Date: 10/10/2018
+ * @Author: Kevin Gleeson
+ * Desc: 
+ * 
+ * Refferences:
+ * https://www.youtube.com/watch?v=2WlY0dL5Qrg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=3
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Adapted from https://www.youtube.com/watch?v=2WlY0dL5Qrg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=3
+using UnityEngine.SceneManagement;
+
 public class EnemyController : MonoBehaviour
 {
     //Var to hold enemy speed
@@ -17,6 +27,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        loadBoss();
+        
         //Get the current position of the enemy ship
         Vector2 position = transform.position;
         //Get next position in the frame
@@ -37,12 +49,18 @@ public class EnemyController : MonoBehaviour
         if (col.tag == "PlayerBulletTag")
         {
             Destroy(gameObject);
-            Score.scoreValue = Score.scoreValue + 10;
+            Score.scoreValue +=  10;
         }
         if (col.tag == "PlayerShipTag")
         {
             Destroy(gameObject);
         }
     }
-
+    private void loadBoss()
+    {
+        if (Score.scoreValue > 30)
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
 }

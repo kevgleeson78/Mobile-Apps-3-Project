@@ -1,4 +1,15 @@
-﻿using System.Collections;
+﻿/* Application Name: Space Attack
+ * File Name: 
+ * Version: 1.0
+ * @Date: 10/10/2018
+ * @Author: Kevin Gleeson
+ * Desc: 
+ * 
+ * Refferences:
+ * 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //Adapted from https://www.youtube.com/watch?v=2WlY0dL5Qrg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=3
