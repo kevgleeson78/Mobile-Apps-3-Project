@@ -12,19 +12,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //Adapted from https://forum.unity.com/threads/left-and-right-enemy-moving-in-2d-platformer.364716/
 public class BossController : MonoBehaviour
 {
     //Var to hold enemy speed
     float speed;
     private bool dirRight = true;
-   
+    int sceneIndex;
     // Use this for initialization
     public static float health;
+
+    public static float difficluty = 0f;
     void Start()
     {   //Set speed
         speed = 2f;
         health = 10;
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     
@@ -53,7 +57,10 @@ public class BossController : MonoBehaviour
         }
         if(health <= 0)
         {
+            EnemyController.shipDistCount += 1;
+            difficluty += .9f;
             Destroy(gameObject);
+            SceneManager.LoadScene(1);
         }
     }
         private void OnTriggerEnter2D(Collider2D col)

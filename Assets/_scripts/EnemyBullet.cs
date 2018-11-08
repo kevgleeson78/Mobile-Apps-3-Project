@@ -20,7 +20,7 @@ public class EnemyBullet : MonoBehaviour {
     // Use this for initialization
     private void Awake()
     {
-        speed = 2.5f;
+        speed = 2.5f + BossController.difficluty;
         isReady = false;
     }
     void Start () {

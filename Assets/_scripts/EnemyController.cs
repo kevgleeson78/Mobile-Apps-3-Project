@@ -16,12 +16,13 @@ using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
+   public static int shipDistCount = 0;
     //Var to hold enemy speed
     float speed;
     // Use this for initialization
     void Start()
     {   //Set speed
-        speed = 1f;
+        speed = 1f + BossController.difficluty;
     }
 
     // Update is called once per frame
@@ -50,6 +51,7 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
             Score.scoreValue +=  10;
+            shipDistCount += 1;
         }
         if (col.tag == "PlayerShipTag")
         {
@@ -58,9 +60,9 @@ public class EnemyController : MonoBehaviour
     }
     private void loadBoss()
     {
-        if (Score.scoreValue > 30)
+        if (shipDistCount %5 == 0 && shipDistCount != 0)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
     }
 }

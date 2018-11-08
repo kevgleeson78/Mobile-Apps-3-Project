@@ -24,6 +24,9 @@ public class MainMenu : MonoBehaviour {
         //Set the initial score value to zero for the start of the game
         Score.scoreValue = 0;
         //Start the game at level 1 once the start game button is clicked/ tapped
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        EnemyController.shipDistCount = 0;
+
+        BossController.difficluty = 0;
+        SceneManager.LoadScene(1);
     }
 }

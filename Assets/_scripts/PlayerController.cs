@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour {
     {
         // Condition for collisions with either an enemy ship or enemy bullet
         // Using the tag identifier to get access to the game objects
-        if ((col.tag == "EnemyShipTag") || (col.tag == "EnemyBulletTag"))
+        if ((col.tag == "EnemyShipTag") || (col.tag == "EnemyBulletTag") || (col.tag == "BossTag"))
         {
             //Remove the game object if the collision has been detected
             Destroy(gameObject);
@@ -95,10 +95,11 @@ public class PlayerController : MonoBehaviour {
             if (Lives.livesValue == 0)
             {
                 //Function to reload the scene used in the game over condition
+               
+                SceneManager.LoadScene(3);
+               
+               
 
-                 SceneManager.LoadScene(2);
-                
-                
             }
 
         }
