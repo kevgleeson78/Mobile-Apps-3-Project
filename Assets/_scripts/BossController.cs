@@ -19,7 +19,7 @@ public class BossController : MonoBehaviour
     //Var to hold enemy speed
     float speed;
     private bool dirRight = true;
-    int sceneIndex;
+    private int sceneIndex;
     // Use this for initialization
     public static float health;
 

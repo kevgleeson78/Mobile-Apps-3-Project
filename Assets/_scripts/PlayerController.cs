@@ -13,6 +13,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 //Adapted From https://www.youtube.com/watch?v=Om00FwLg-eg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=2
 
 public class PlayerController : MonoBehaviour {
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour {
     // For positioning of the bullet at the top of the spaceship
     public GameObject BulletPosition;
     // The speed the ship travels
-    
+    public Button myButton;
     public float speed = 1;
         
     // Update is called once per frame
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour {
         // Call the move function
         Move(direction);
         // Input for fire of bullet
+
         if (Input.GetKeyDown("space"))
         {
             // Play audio when the bullet is fired
@@ -44,11 +46,24 @@ public class PlayerController : MonoBehaviour {
             // Set the bullets position when fired
             bullet.transform.position = BulletPosition.transform.position;
         }
-
-       
+        
        
     }
-
+    void Start()
+    {
+        myButton.onClick.AddListener(() => { shoot(); });
+    }
+    public void shoot()
+    {
+        
+            // Play audio when the bullet is fired
+            GetComponent<AudioSource>().Play();
+            // Instantiate the bullet prefab
+            GameObject bullet = (GameObject)Instantiate(PlayerBullet);
+            // Set the bullets position when fired
+            bullet.transform.position = BulletPosition.transform.position;
+        
+    }
     private void Move(Vector2 direction)
     {
         // limit the player movement to the screen width and height
