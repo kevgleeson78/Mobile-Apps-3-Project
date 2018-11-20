@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-//Adapted From https://www.youtube.com/watch?v=Om00FwLg-eg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=2
+
 
 public class PlayerController : MonoBehaviour {
    
@@ -25,16 +25,32 @@ public class PlayerController : MonoBehaviour {
     // The speed the ship travels
     public Button myButton;
     public float speed = 1;
-        
+    public VirtualJoystick moveJoystick;
     // Update is called once per frame
     void Update () {
-        // x,y for getting the verticle and horizontal movements of the ship
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxis("Vertical");
+       
         // TO set the direction of the ship
-        Vector2 direction = new Vector2(x, y).normalized;
-        // Call the move function
+        Vector2 direction =  Vector2.zero;
+        
+        // Condition to chseck for which type of input the user is using
+        //If the joystick has been activated by tapping the image set direction to the joysticks inputDirection
+        if (moveJoystick.Inputdirection != Vector2.zero)
+        {
+            direction = moveJoystick.Inputdirection;
+            
+        }
+        //If the keyboard buttons have been pressed set the direction to horizontal and vertical
+        else
+        {
+            // x,y for getting the verticle and horizontal movements of the ship
+            direction.x = Input.GetAxisRaw("Horizontal");
+            direction.y = Input.GetAxis("Vertical");
+           
+        }
+        // The move function for the movement direction of the ship
         Move(direction);
+
+
         // Input for fire of bullet
 
         if (Input.GetKeyDown("space"))
@@ -51,6 +67,10 @@ public class PlayerController : MonoBehaviour {
     }
     void Start()
     {
+        // Action listener for the ui button clicked
+        //There was a problem adding a clicked event to a perfab.
+        //The bullets were not Stay with th ship when the ship moved from its starting point.
+        // Solution adapted from https://stackoverflow.com/questions/42306703/unity-button-not-shooting-projectile-properly
         myButton.onClick.AddListener(() => { shoot(); });
     }
     public void shoot()
@@ -64,6 +84,8 @@ public class PlayerController : MonoBehaviour {
             bullet.transform.position = BulletPosition.transform.position;
         
     }
+    //The move player function
+    //Adapted From https://www.youtube.com/watch?v=Om00FwLg-eg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=2
     private void Move(Vector2 direction)
     {
         // limit the player movement to the screen width and height
