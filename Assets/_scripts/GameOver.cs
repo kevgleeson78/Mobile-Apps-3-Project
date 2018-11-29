@@ -22,15 +22,31 @@ public class GameOver : MonoBehaviour {
     private string _scoreInput = Score.scoreValue.ToString();
     // init the input for the player name
     private void OnGUI()
-    {   // Start of the gui element With position and size
-        GUILayout.BeginArea(new Rect(0, 0, 500, 500));
+    {
+        GUIStyle font = new GUIStyle();
+       int formWidth = 250;
+        int formHeight = 200;
+        // Start of the gui element With position and size
+        GUILayout.BeginArea(new Rect(Screen.width /2 - (formWidth/2), Screen.height /2 , formWidth, formHeight));
+        //Set the font size.
+        font.fontSize = 20;
+        //Set teh colour of the font.
+        font.normal.textColor = Color.white;
         // Interface for reporting test scores.
         //Spaceing for the child elements
         GUILayout.Space(10);
-        // Get the player score
-        _nameInput = GUILayout.TextField(_nameInput);
+        GUILayout.Label("Please enter your name: ", font);
+
+        //Set default name if empty
+
+        
+      
+            // Get the player score
+            _nameInput = GUILayout.TextField(_nameInput);
+      
+       
         // A lable to display the player score to the user
-        GUILayout.Label("Player Score: " + _scoreInput);
+        GUILayout.Label("Player Score: " + _scoreInput , font);
         // A button for submitting the player score and name
         // With a condition for a clicked event
         if (GUILayout.Button("Record"))
@@ -39,6 +55,10 @@ public class GameOver : MonoBehaviour {
             int score;
             //Parse the player score as it is a string data type 
             int.TryParse(_scoreInput, out score);
+            if (_nameInput == "")
+            {
+                _nameInput = "Paul McGrath";
+            }
             // Call the  Record function from the Leaderboard script
             Leaderboard.Record(_nameInput, score);
 

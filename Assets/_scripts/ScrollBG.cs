@@ -18,6 +18,8 @@ public class ScrollBG : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        //Fro continious scrolling of the background stars
         Vector2 offset = new Vector2(0 ,Time.time * speed);
         GetComponent<Renderer>().material.mainTextureOffset = offset;
 	}

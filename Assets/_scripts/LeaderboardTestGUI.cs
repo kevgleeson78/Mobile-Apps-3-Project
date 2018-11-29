@@ -11,23 +11,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 // Adapted From https://forum.unity.com/threads/leaderboard-script-using-playerprefs.257900/
 public class LeaderboardTestGUI : MonoBehaviour {
-   
-
-    private void OnGUI()
+    //Fro displaying the name and score
+    string scoreValue = "";
+    //Get the gameobject text
+    Text score;
+    
+    // Use this for initialization
+    void Start()
     {
-        GUILayout.BeginArea(new Rect(0, 0, 500, 500));
-
-        // Display high scores!
+        // Display high scores! top 10
         for (int i = 0; i < Leaderboard.EntryCount; ++i)
         {
+
+            //Get the entries from the leaderbord file
             var entry = Leaderboard.GetEntry(i);
-            GUILayout.Label(i +1 +" Name: " + entry.name + ", Score: " + entry.score);
+            // Stroe each record in a string for displaying
+            scoreValue += i + 1 + " Name: " + entry.name + ", Score: " + entry.score +"\n";
+            //Get acces to the onscreen text game object
+            score = GetComponent<Text>();
+            //Set each player name and score to teh text object
+            score.text = scoreValue;
+
+
+            //Debug.Log(scoreValue);
         }
-
-      
-
-        GUILayout.EndArea();
     }
+
+    
 }

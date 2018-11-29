@@ -9,6 +9,7 @@ TagManager:
   - PlayerBulletTag
   - EnemyBulletTag
   - BossTag
+  - music
   layers:
   - Default
   - TransparentFX

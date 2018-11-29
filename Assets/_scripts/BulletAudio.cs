@@ -5,7 +5,7 @@
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
  * Desc: 
- * This script is is sued fro binding an audio scourc to an event within the game.
+ * This script is is used for binding an audio scource to an event within the game.
  * The event in this case is the player fireing.
  * There is a serialized field for binding the audio clip to the game object.
  * THis is accessible to the user when they have attached this script to the audio object in unity.

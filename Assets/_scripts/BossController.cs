@@ -18,15 +18,18 @@ public class BossController : MonoBehaviour
 {
     //Var to hold enemy speed
     float speed;
+    //Moving right
     private bool dirRight = true;
+    //Get the scene index
     private int sceneIndex;
-    // Use this for initialization
+    // The boss health
     public static float health;
-
+    //For increment the difficulty
     public static float difficluty = 0f;
     void Start()
     {   //Set speed
         speed = 2f;
+        //Set the health of the boss
         health = 10;
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
@@ -36,14 +39,19 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
+        //Get the position of the left and right of the screen
+        //For moving the boss
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+        //Account for the width of the boss ship
         max.x = max.x - 4f;
         //Offset to allow for the width of the ship sprite to right of screen
         min.x = min.x + 4f;
+        //If moving right
         if (dirRight)
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         else
+            //Move left
             transform.Translate(-Vector2.right * speed * Time.deltaTime);
 
         if (transform.position.x >= max.x)
@@ -55,11 +63,16 @@ public class BossController : MonoBehaviour
         {
             dirRight = true;
         }
+        //IF the boss has been destroyed
         if(health <= 0)
         {
+            //increment the destroyed ship counter
             EnemyController.shipDistCount += 1;
+            //increse the dificulty
             difficluty += .9f;
+            //Destroy teh boss ship
             Destroy(gameObject);
+            //Load the first scene
             SceneManager.LoadScene(1);
         }
     }
@@ -67,11 +80,15 @@ public class BossController : MonoBehaviour
     {
         if (col.tag == "PlayerBulletTag")
         {
+            //Decrement the boss health when hit
             health -= .1f;
+            //Increment the player score
             Score.scoreValue = Score.scoreValue + 10;
         }
         if (col.tag == "PlayerShipTag")
         {
+            //If the player ship collides with the player ship 
+            //decement the boss health
             health -= .1f;
         }
     }

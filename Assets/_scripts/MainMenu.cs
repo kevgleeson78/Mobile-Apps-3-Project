@@ -25,8 +25,9 @@ public class MainMenu : MonoBehaviour {
         Score.scoreValue = 0;
         //Start the game at level 1 once the start game button is clicked/ tapped
         EnemyController.shipDistCount = 0;
-
+        //Set the difficulty to zero on a new game start
         BossController.difficluty = 0;
+        //laod the scene
         SceneManager.LoadScene(1);
     }
 }

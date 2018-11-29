@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //load the boss level
         loadBoss();
         
         //Get the current position of the enemy ship
@@ -47,21 +48,29 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        //Check for collisions of player bullet
         if (col.tag == "PlayerBulletTag")
         {
+            //Destroy the enemy ship
             Destroy(gameObject);
+            //Increment the player score
             Score.scoreValue +=  10;
+            // A counter for the amount of ships distroyed
             shipDistCount += 1;
         }
+        //If hte player ship collides with the enemy ship
         if (col.tag == "PlayerShipTag")
         {
+            //Distroy the enemy ship
             Destroy(gameObject);
         }
     }
     private void loadBoss()
     {
+        //Boss level loads every 5 ships destroyed and noty at the start of a new level
         if (shipDistCount %5 == 0 && shipDistCount != 0)
         {
+            // load the boss scene
             SceneManager.LoadScene(2);
         }
     }
