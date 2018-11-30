@@ -30,4 +30,13 @@ public class MainMenu : MonoBehaviour {
         //laod the scene
         SceneManager.LoadScene(1);
     }
+    public void showInstructions()
+    {
+        //laod the scene
+        SceneManager.LoadScene(4);
+    }
+    public void mainMenuLoad()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

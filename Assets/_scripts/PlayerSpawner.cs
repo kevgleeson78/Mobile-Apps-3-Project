@@ -34,6 +34,7 @@ public class PlayerSpawner : MonoBehaviour {
 	}
 	void SpawnPlayer()
     {
+        
         // One second delay
         spawnTimer = 1;
         //New player instance

@@ -28,7 +28,7 @@ public class BossController : MonoBehaviour
     public static float difficluty = 0f;
     void Start()
     {   //Set speed
-        speed = 2f;
+        speed = 2f + difficluty;
         //Set the health of the boss
         health = 10;
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -69,7 +69,7 @@ public class BossController : MonoBehaviour
             //increment the destroyed ship counter
             EnemyController.shipDistCount += 1;
             //increse the dificulty
-            difficluty += .9f;
+            difficluty += .05f;
             //Destroy teh boss ship
             Destroy(gameObject);
             //Load the first scene

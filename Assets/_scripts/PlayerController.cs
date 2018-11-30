@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour {
     public GameObject PlayerBullet;
     // For positioning of the bullet at the top of the spaceship
     public GameObject BulletPosition;
+
+    public float fireRate = 1f;
+    private float nextFire = 0;
     // The speed the ship travels
     public Button myButton;
     public float speed = 1;
@@ -53,14 +56,16 @@ public class PlayerController : MonoBehaviour {
 
         // Input for fire of bullet
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && Time.time > nextFire)
         {
+            nextFire = Time.time + fireRate;
+            shoot();
             // Play audio when the bullet is fired
-            GetComponent<AudioSource>().Play();
+           // GetComponent<AudioSource>().Play();
             // Instantiate the bullet prefab
-            GameObject bullet = (GameObject)Instantiate(PlayerBullet);
+           // GameObject bullet = (GameObject)Instantiate(PlayerBullet);
             // Set the bullets position when fired
-            bullet.transform.position = BulletPosition.transform.position;
+          //  bullet.transform.position = BulletPosition.transform.position;
         }
         
        
@@ -71,8 +76,12 @@ public class PlayerController : MonoBehaviour {
         //There was a problem adding a clicked event to a perfab.
         //The bullets were not Stay with th ship when the ship moved from its starting point.
         // Solution adapted from https://stackoverflow.com/questions/42306703/unity-button-not-shooting-projectile-properly
-        myButton.onClick.AddListener(() => { shoot(); });
+        
+            myButton.onClick.AddListener(shoot);
+        
+     
     }
+
     public void shoot()
     {
         
@@ -82,7 +91,9 @@ public class PlayerController : MonoBehaviour {
             GameObject bullet = (GameObject)Instantiate(PlayerBullet);
             // Set the bullets position when fired
             bullet.transform.position = BulletPosition.transform.position;
-        
+           
+
+
     }
     //The move player function
     //Adapted From https://www.youtube.com/watch?v=Om00FwLg-eg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=2

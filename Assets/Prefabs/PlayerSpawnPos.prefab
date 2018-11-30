@@ -51,5 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07af1db0461b8324a8a9d583474d2ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPefab: {fileID: 1902120137936476, guid: 1ff53f88422034341bc5b4ebe9dd14a6,
+  playerPefab: {fileID: 1007663523256970, guid: 1ff53f88422034341bc5b4ebe9dd14a6,
     type: 2}

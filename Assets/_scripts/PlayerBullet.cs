@@ -17,8 +17,8 @@ public class PlayerBullet : MonoBehaviour {
     float speed;
     private void Start()
     {
-        //Set teh speed of the buullet
-        speed = 8f;
+        //Set the speed of the buullet
+        speed = 5f;
     }
     private void Update()
     {
