@@ -5,7 +5,7 @@
  * @Author: Kevin Gleeson
  * Desc: 
  * 
- * Refferences:
+ * 
  * 
  */
 
@@ -51,13 +51,13 @@ public class Leaderboard : MonoBehaviour {
 
     private static void SortScores()
     {
-        // Sort the scores from high to low
+        // Sort the scores from high to low using compareTo Method
         s_Entries.Sort((a, b) => b.score.CompareTo(a.score));
     }
 
     private static void LoadScores()
     {
-        //C;ear the list
+        //Clear the list
         s_Entries.Clear();
         //Repopulate the list
         for (int i = 0; i < EntryCount; ++i)

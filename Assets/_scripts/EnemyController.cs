@@ -67,8 +67,8 @@ public class EnemyController : MonoBehaviour
     }
     private void loadBoss()
     {
-        //Boss level loads every 5 ships destroyed and noty at the start of a new level
-        if (shipDistCount %5 == 0 && shipDistCount != 0)
+        //Boss level loads every 5 ships destroyed and not at the start of a new level
+        if (shipDistCount %20 == 0 && shipDistCount != 0)
         {
             // load the boss scene
             SceneManager.LoadScene(2);
