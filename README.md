@@ -19,3 +19,8 @@ This continues until the player has lost all of their lives.
 
 
 ## Cloning and running the application.
+To run this game:
+* install [Unity](https://unity3d.com/).
+* Clone this repo to your local machine
+* Import the project to unity and run the game.
+
