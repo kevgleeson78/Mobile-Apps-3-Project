@@ -74,26 +74,20 @@ public class PlayerController : MonoBehaviour {
     {
         // Action listener for the ui button clicked
         //There was a problem adding a clicked event to a perfab.
-        //The bullets were not Stay with th ship when the ship moved from its starting point.
+        //The bullets were not staying with th ship when the ship moved from its starting point.
         // Solution adapted from https://stackoverflow.com/questions/42306703/unity-button-not-shooting-projectile-properly
         
             myButton.onClick.AddListener(shoot);
-        
-     
     }
 
     public void shoot()
-    {
-        
+    {     
             // Play audio when the bullet is fired
             GetComponent<AudioSource>().Play();
             // Instantiate the bullet prefab
             GameObject bullet = (GameObject)Instantiate(PlayerBullet);
             // Set the bullets position when fired
             bullet.transform.position = BulletPosition.transform.position;
-           
-
-
     }
     //The move player function
     //Adapted From https://www.youtube.com/watch?v=Om00FwLg-eg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=2
@@ -119,9 +113,6 @@ public class PlayerController : MonoBehaviour {
         position.y = Mathf.Clamp(position.y, min.y, max.y);
         // Update the ship position
         transform.position = position;
-
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D col)

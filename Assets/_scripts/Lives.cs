@@ -4,8 +4,8 @@
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
  * Desc: 
+ * This class is used to control the player lives.
  * 
- * Refferences:
  * 
  */
 using System.Collections;
