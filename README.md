@@ -6,8 +6,8 @@
 
 This game was built using  [Unity](https://unity3d.com/) and deployed as a [UWP](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide) application.
 
-Author: [Kevin Gleeson](https://github.com/kevgleeson78)
-
+Developed by: [Kevin Gleeson](https://github.com/kevgleeson78)
+GAme design by:[Ray Mannion]()
 Fourth year student at:[GMIT](http://gmit.ie) Galway
 
 ## Application outline:
