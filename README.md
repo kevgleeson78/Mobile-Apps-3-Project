@@ -8,7 +8,7 @@ This game was built using  [Unity](https://unity3d.com/) and deployed as a [UWP]
 
 Developed by: [Kevin Gleeson](https://github.com/kevgleeson78)
 
-Game design by:[Ray Mannion](https://github.com/rayman51)
+Game design by: [Ray Mannion](https://github.com/rayman51)
 
 Fourth year student at:[GMIT](http://gmit.ie) Galway
 
