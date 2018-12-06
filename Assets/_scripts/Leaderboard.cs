@@ -1,12 +1,8 @@
 ﻿/* Application Name: Space Attack
- * File Name: 
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * 
- * 
+ * A script to hold the player score and name in the player prefs file.
  */
 
 using System.Collections;

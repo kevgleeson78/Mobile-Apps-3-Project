@@ -8,7 +8,6 @@
  * It is the first screen the user will see when the game starts or
  * when the game has ended and the user has entered and submitted their name.
  * When the play button is clicked it is bound to an event handler that will load the game at level one.
- * Refferences:
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -28,15 +27,15 @@ public class MainMenu : MonoBehaviour {
         //Set the difficulty to zero on a new game start
         BossController.difficluty = 0;
         //laod the scene
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("GameArea");
     }
     public void showInstructions()
     {
         //laod the scene
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Instructions");
     }
     public void mainMenuLoad()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 }

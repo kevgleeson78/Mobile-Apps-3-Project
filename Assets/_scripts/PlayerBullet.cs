@@ -3,10 +3,7 @@
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * Refferences:
- * 
+ * Desc: A script to controll the player bullet behaviour
  */
 using System.Collections;
 using System.Collections.Generic;

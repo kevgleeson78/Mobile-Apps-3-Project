@@ -3,10 +3,8 @@
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * Refferences:
- * 
+ * Desc: A script to control the spawning of the player ship.
+ * The spawner has a timer to stop respawning right away.
  */
 
 using System.Collections;

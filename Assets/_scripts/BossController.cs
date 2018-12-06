@@ -4,8 +4,7 @@
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
  * Desc: 
- * 
- * Refferences:
+ * A Script to control the boss movement, firing and load a scene if the boss has bee destroyed.
  * 
  */
 
@@ -73,7 +72,7 @@ public class BossController : MonoBehaviour
             //Destroy teh boss ship
             Destroy(gameObject);
             //Load the first scene
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("GameArea");
         }
     }
         private void OnTriggerEnter2D(Collider2D col)

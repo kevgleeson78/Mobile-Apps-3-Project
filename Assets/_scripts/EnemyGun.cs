@@ -3,10 +3,8 @@
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * Refferences:
- * 
+ * Desc: A script to control the direction of the enemy bullets.
+ * Also controls the speed they tavel.
  */
 using System.Collections;
 using System.Collections.Generic;

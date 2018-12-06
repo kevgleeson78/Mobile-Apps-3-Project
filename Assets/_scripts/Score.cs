@@ -1,11 +1,9 @@
 ﻿/* Application Name: Space Attack
- * File Name: 
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * Refferences:
+ * Desc: A script for updateing the player score.
+ * A counter is also here to award an extra life for every 2000 points scored.
  * 
  */
 using System;

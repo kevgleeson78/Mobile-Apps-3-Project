@@ -3,9 +3,8 @@
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
+ * Desc: A script to control teh spawning of enemy ships
  * 
- * Refferences:
  * 
  */
 using System.Collections;

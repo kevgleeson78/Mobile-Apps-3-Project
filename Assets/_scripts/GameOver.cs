@@ -66,7 +66,7 @@ public class GameOver : MonoBehaviour {
             _nameInput = "";
             _scoreInput = "0";
             //Load the main menu when the name and score have been submitted
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Menu");
         }
 
         //Close the GUI elements

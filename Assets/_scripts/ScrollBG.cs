@@ -3,9 +3,7 @@
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * Refferences:
+ * Desc: A script to controll the background scrolling of an image
  * 
  */
 using System.Collections;

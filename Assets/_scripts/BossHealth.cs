@@ -7,14 +7,12 @@
  * This script is used to scale a sprite image that is a child of the boss game object.
  * When a collision is detected teh bossController script decrements it health value.
  * The local scale.x is the scaled with the update function.
- * It will scale down in size as the bosss character gets hit with a oplayer bullet.
- * 
- * Refferences:
+ * It will scale down in size as the bosss character gets hit with a player bullet.
  */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Adapted from: https://www.youtube.com/watch?v=yeMOuXiVAos
 public class BossHealth : MonoBehaviour {
     // A vector2 variable to hold and be able to scale the boss sprtie image.
     Vector2 scale;

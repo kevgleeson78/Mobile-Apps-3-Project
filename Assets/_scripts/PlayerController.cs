@@ -1,11 +1,11 @@
 ﻿/* Application Name: Space Attack
- * File Name: 
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * Refferences:
+ * Desc: A script to control all of the players behaviour.
+ * With movement, Fireing and collision detection.
+ * teh lives counter is cahnges here when the player has reached 2000 points or has been destroyed by the enemy.
+ * Also loading game over scene when lives has reached zero.
  * 
  */
 using System;
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour {
             {
                 //Function to reload the scene used in the game over condition
                
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("GameOver");
                
                
 

@@ -1,12 +1,10 @@
 ﻿/* Application Name: Space Attack
- * File Name: 
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
- * 
- * Refferences:
- * 
+ * Desc: A script to set the direction of teh bullet taken from the enemyGun Script.
+ * The speed of the bullets are also increased once teh boss character has been defeated.
+ * Collision detection is here for player ships and bullets.
  */
 
 using System.Collections;

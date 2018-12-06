@@ -1,13 +1,17 @@
-﻿using System.Collections;
+﻿/* Application Name: Space Attack
+ * Version: 1.0
+ * @Date: 10/10/2018
+ * @Author: Kevin Gleeson
+ * 
+ * This class is for keeping the background music going
+ * while changing scenes.
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DontDestroy : MonoBehaviour {
-    /*
-     * 
-     * This class is for keeping the background music going
-     * while changing scenes.
-    */
+    
     void Awake()
     {   //Get GameObject with the audio attached
         GameObject[] objs = GameObject.FindGameObjectsWithTag("music");

@@ -1,10 +1,12 @@
 ﻿
 /* Application Name: Space Attack
- * File Name: 
  * Version: 1.0
  * @Date: 10/10/2018
  * @Author: Kevin Gleeson
- * Desc: 
+ * Desc: This script controlls the main enemies movement.
+ * A counter is also used here to trigger the boss level.
+ * Collision detection between the player ship and bullets.
+ * Destroy the enemy ship once it has lseft the view of the screen.
  * 
  * Refferences:
  * https://www.youtube.com/watch?v=2WlY0dL5Qrg&list=PLRN2Qvxmju0Mf1GB1hXsT-x1GQJQ0pwE0&index=3
@@ -67,11 +69,11 @@ public class EnemyController : MonoBehaviour
     }
     private void loadBoss()
     {
-        //Boss level loads every 5 ships destroyed and not at the start of a new level
+        //Boss level loads every 20 ships destroyed and not at the start of a new level
         if (shipDistCount %20 == 0 && shipDistCount != 0)
         {
             // load the boss scene
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Boss");
         }
     }
 }

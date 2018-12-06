@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* Application Name: Space Attack
+ * Version: 1.0
+ * @Date: 10/10/2018
+ * @Author: Kevin Gleeson
+ * A script to Control the player virtual joystick on the screen.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
